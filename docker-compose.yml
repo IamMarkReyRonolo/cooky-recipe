@@ -6,7 +6,7 @@ services:
     environment:
       POSTGRES_PASSWORD: cooky_recipe_apis123
       POSTGRES_USER: cookyadmin
-      POSTGRES_DB: cooky_recipe_apis
+      POSTGRES_DB: cookyrecipedb
     ports:
       - "5433:5432"
     networks:
