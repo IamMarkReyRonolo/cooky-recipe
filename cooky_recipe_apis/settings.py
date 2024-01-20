@@ -144,7 +144,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'cookyrecipe',
         'USER': 'cookyadmin',
-        'PASSWORD': 'CookyRecipe123',
+        'PASSWORD': 'cooky_recipe_apis123',
         'HOST': 'db',
         'PORT': '5432',
     }
