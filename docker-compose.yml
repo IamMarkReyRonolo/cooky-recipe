@@ -1,0 +1,35 @@
+version: '3'
+services:
+  db:
+    restart: always
+    image: postgres:latest
+    environment:
+      POSTGRES_PASSWORD: cooky_recipe_apis123
+      POSTGRES_USER: cookyadmin
+      POSTGRES_DB: cooky_recipe_apis
+    ports:
+      - "5433:5432"
+    networks:
+      - cooky_recipe_apis
+    volumes:
+      - pgdata:/var/lib/postgresql/data/
+
+  webapp:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/cooky_recipe_apis
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - db
+    networks:
+      - cooky_recipe_apis
+
+networks:
+  cooky_recipe_apis:
+
+volumes:
+  pgdata:
