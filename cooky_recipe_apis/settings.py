@@ -142,10 +142,10 @@ SWAGGER_SETTINGS = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'cookyrecipedb',
+        'NAME': 'cookyrecipe',
         'USER': 'cookyadmin',
-        'PASSWORD': 'cooky_recipe_apis123',
-        'HOST': 'db',
+        'PASSWORD': 'CookyRecipe123',
+        'HOST': 'postgresdb',
         'PORT': '5432',
     }
 }
