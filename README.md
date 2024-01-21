@@ -49,16 +49,16 @@ You can set up and run this project using the traditional virtual environment ap
 ### Cooky APIs
 
 1. **Recipe API**
-![Recipe API](https://prnt.sc/M9FoRowncuaQ)
+![Recipe API](./images/Recipe_API.jpg)
 
 2. **Registration API**
-![Registration API](https://prnt.sc/2Nt1t6OWufXr)
+![Registration API](./images/Register_API.jpg)
 
 3. **Token API**
-![Token API](https://prnt.sc/WTGMGHd4d-VZ)
+![Token API](./images/Token_API.jpg)
 
 4. **Users API**
-![Users API](https://prnt.sc/TWy_vBJwcp5d)
+![Users API](./images/Users_API.jpg)
 
 ### Testing
 
@@ -68,7 +68,7 @@ You can set up and run this project using the traditional virtual environment ap
     python manage.py test
 
 - Sample Test Result
-![Coverage Result](https://prnt.sc/3AazQUMKOty7)
+![Test Result](./images/test_report.jpg)
 
 
 2. **To measure test coverage, you can use the coverage tool**
@@ -78,5 +78,5 @@ You can set up and run this project using the traditional virtual environment ap
     coverage html
 
 - Sample Coverage Result
-![Coverage Result](https://prnt.sc/wJdTggh-69dn)
+![Coverage Result](./images/Coverage_Report.jpg)
 
