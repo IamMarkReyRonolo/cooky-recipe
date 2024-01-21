@@ -3,6 +3,7 @@
 ## Overview
 
 Cooky: Recipes from all over the world.
+Click [Cooky Live Server](http://188.166.254.91:8000/swagger/) to try it right away!
 
 ## Local Setup
 You can set up and run this project using the traditional virtual environment approach or using docker:
