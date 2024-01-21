@@ -47,13 +47,13 @@ Briefly describe your app and its purpose.
 
 ### Testing
 
-**Running Tests**
+1. **Running Tests**
     To run tests, use the following command:
     ```bash
     python manage.py test
 
 
-**To measure test coverage, you can use the coverage tool**
+2. **To measure test coverage, you can use the coverage tool**
     ```bash
     coverage run manage.py test
     coverage report
