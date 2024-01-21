@@ -43,6 +43,11 @@ def recipe_detail(request, pk):
         return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
     if request.method == "GET":
+        # Check if the user is a staff member or the owner of the recipe
+        if not request.user.is_staff and request.user != recipe.owner:
+            return Response(
+                {"error": "Permission denied"}, status=status.HTTP_403_FORBIDDEN
+            )
         serializer = RecipeSerializer(recipe)
         return Response(serializer.data)
 
