@@ -74,7 +74,7 @@ def list_users(request):
     method="DELETE",
     responses={status.HTTP_204_NO_CONTENT: 'User deleted successfully'}
 )
-@api_view(['PUT', 'DELETE'])
+@api_view(['GET', 'PUT', 'DELETE'])
 @permission_classes([permissions.IsAdminUser])
 def manage_user(request, user_id):
     try:
@@ -82,14 +82,20 @@ def manage_user(request, user_id):
     except User.DoesNotExist:
         return Response({'error': 'User not found'},
                         status=status.HTTP_404_NOT_FOUND)
-
+    
+    if request.method == "GET":
+        serializer = CustomUserSerializer(user)
+        return Response(serializer.data)
+    
     if request.method == 'PUT':
         serializer = CustomUserSerializer(user, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data)
+            return Response(
+                {"message": "Successfully updated", "updated_user": serializer.data}
+            )
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     elif request.method == 'DELETE':
         user.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response({"message": "Successfully deleted"}, status=status.HTTP_200_OK)
