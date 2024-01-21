@@ -1,12 +1,26 @@
-# Your App Name
+# Cooky API
 
 ## Overview
 
-Briefly describe your app and its purpose.
+Cooky: Recipes from all over the world.
 
 ## Local Setup
+You can set up and run this project using the traditional virtual environment approach or using docker:
 
-### Using `venv`
+### Using Docker
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/IamMarkReyRonolo/cooky-recipe.git
+   cd cooky-recipe
+
+2. **Build and Run Docker Container:**
+    ```bash
+    docker-compose up --build -d
+
+3. Access the documentation of the app at http://localhost:8000/swagger/
+
+### Traditional Setup with `venv`
 
 1. **Clone the Repository:**
    ```bash
@@ -30,20 +44,21 @@ Briefly describe your app and its purpose.
     ```bash
     python manage.py runserver
 
-6. Access the app at http://localhost:8000/
+6. Access the documentation of the app at http://localhost:8000/swagger/
 
-### Using Docker
+### Cooky APIs
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/IamMarkReyRonolo/cooky-recipe.git
-   cd cooky-recipe
+1. **Recipe API**
+![Recipe API](https://prnt.sc/M9FoRowncuaQ)
 
-2. **Build and Run Docker Container:**
-    ```bash
-    docker-compose up --build -d
+2. **Registration API**
+![Registration API](https://prnt.sc/2Nt1t6OWufXr)
 
-3. Access the app at http://localhost:8000/
+3. **Token API**
+![Token API](https://prnt.sc/WTGMGHd4d-VZ)
+
+4. **Users API**
+![Users API](https://prnt.sc/TWy_vBJwcp5d)
 
 ### Testing
 
@@ -52,6 +67,9 @@ Briefly describe your app and its purpose.
     ```bash
     python manage.py test
 
+- Sample Test Result
+![Coverage Result](https://prnt.sc/3AazQUMKOty7)
+
 
 2. **To measure test coverage, you can use the coverage tool**
     ```bash
@@ -59,4 +77,6 @@ Briefly describe your app and its purpose.
     coverage report
     coverage html
 
+- Sample Coverage Result
+![Coverage Result](https://prnt.sc/wJdTggh-69dn)
 
