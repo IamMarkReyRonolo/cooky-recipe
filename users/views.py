@@ -82,6 +82,8 @@ def manage_user(request, user_id):
     except User.DoesNotExist:
         return Response({'error': 'User not found'},
                         status=status.HTTP_404_NOT_FOUND)
+    except Exception as e:
+        return Response({"error": str(e)},status=status.HTTP_400_BAD_REQUEST)
     
     if request.method == "GET":
         serializer = CustomUserSerializer(user)
