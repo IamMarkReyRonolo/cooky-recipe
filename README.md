@@ -60,7 +60,8 @@ You can set up and run this project using the traditional virtual environment ap
 4. **Users API**
 ![Users API](./images/Users_API.jpg)
 
-5. **Authorization (Bearer Token)**
+5. **Authorization Bearer Token**
+**GIF**
 ![Auth](./images/auth.gif)
 
 ### Testing
